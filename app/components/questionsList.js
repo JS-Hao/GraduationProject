@@ -58,6 +58,11 @@ class QuestionsList extends React.Component {
 		})
 	}
 
+	numberDealing(num) {
+		num = parseInt(num);
+		return num > 999 ? num.toString().charAt(0) + 'K' : num;
+	}
+
 	render() {
 		return (
 			<ul className='r-questions' style={questionsStyle}>
@@ -69,7 +74,7 @@ class QuestionsList extends React.Component {
 							data-pid={ele.pid} 
 							style={questionStyle} >
 							<i className="r-question-answer" style={answerStyle}>
-								{ele.answers}
+								{this.numberDealing(ele.answers)}
 							</i>
 							<h4 className="r-question-desc" style={descStyle}>
 								<a style={aStyle} href={ele.url ? ele.url : ''}>{ele.question}</a>
