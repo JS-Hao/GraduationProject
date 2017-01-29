@@ -28,6 +28,8 @@ module.exports = {
           presets: ['es2015', 'react'],
         },
       },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
     ],
   },
   // devServer 则是 webpack-dev-server 设定

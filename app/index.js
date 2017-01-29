@@ -1,4 +1,4 @@
-import {QuestionsList} from './components/questionsList';
+/*import {QuestionsList} from './components/questionsList';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
@@ -33,3 +33,16 @@ let data = [
 ];
 
 ReactDOM.render(<QuestionsList data={data}/>, document.getElementById('app'));
+*/
+
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, browserHistory } from 'react-router'
+import router from './components/Router'
+import "./public/css/reset.css"
+import "./public/css/common.css"
+
+render((
+	<Router routes={router} history={browserHistory} />
+	), document.getElementById('app')
+)
