@@ -1,6 +1,7 @@
 import React from 'react'
 import Questions from './Questions/index'
 import Ask from './Ask/index'
+import Login from './Login/index'
 
 let data = [
 	{
@@ -35,8 +36,8 @@ export default React.createClass({
 			<div>
 				{<Ask />}
 				{<Questions data={data}/>}
-				}
-			</div>
+				{<Login />}
+			</div>			
 		)
 	}
 })

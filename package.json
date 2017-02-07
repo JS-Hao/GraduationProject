@@ -4,7 +4,7 @@
   "description": "webpack for react",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
+    "dev": "webpack-dev-server --history-api-fallback --devtool eval --progress --colors --content-base build"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,10 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "body-parser": "^1.16.0",
     "css-loader": "^0.26.1",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2",
