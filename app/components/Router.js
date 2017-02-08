@@ -2,12 +2,14 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import App from './App'
 import Home from './Home/index'
+import Login from './Login/index'
 import Dedails from './Details/index'
 import Me from './Me/index'
 
 export default (
 	<Route path="/" component={App}>
 		<IndexRoute component={Home} />
+		<Route path="/login" component={Login} />
 		{/*<Route path="/details" component={Dedails} />*/}
 		<Route path="/details/:id" component={Dedails} />
 		{/*</Route>*/}
