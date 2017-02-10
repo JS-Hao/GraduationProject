@@ -26675,19 +26675,11 @@
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _index5 = __webpack_require__(255);
 
-	var data = [{
-		pid: 1,
-		timestamp: 234265346,
-		answers: 33,
-		question: '为什么猫喜欢玩球球？'
-	}, {
-		pid: 2,
-		timestamp: 2378234572,
-		answers: 0,
-		question: '如何正确吃饭？'
-	}];
+	var _index6 = _interopRequireDefault(_index5);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
 		displayName: 'Home',
@@ -26696,7 +26688,7 @@
 				'div',
 				null,
 				_react2.default.createElement(_index4.default, null),
-				_react2.default.createElement(_index2.default, { data: data })
+				_react2.default.createElement(_index6.default, null)
 			);
 		}
 	});
@@ -26751,6 +26743,13 @@
 				});
 			}
 		}, {
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(nextProps) {
+				this.setState({
+					data: nextProps.data
+				});
+			}
+		}, {
 			key: 'numberDealing',
 			value: function numberDealing(num) {
 				num = parseInt(num);
@@ -26778,12 +26777,17 @@
 							),
 							_react2.default.createElement(
 								'h4',
-								{ className: 'r-question-desc' },
+								{ className: 'r-question-title' },
 								_react2.default.createElement(
 									_reactRouter.Link,
 									{ to: '/details/' + ele.timestamp },
 									ele.question
 								)
+							),
+							_react2.default.createElement(
+								'h6',
+								{ className: 'r-question-desc' },
+								ele.desc
 							)
 						);
 					})
@@ -26831,7 +26835,7 @@
 
 
 	// module
-	exports.push([module.id, ".r-questions {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n}\r\n\r\n.r-question {\r\n\theight: 55px;\r\n\twidth: 728px;\r\n\tlist-style: none;\r\n\tcursor: pointer;\r\n\tborder-bottom: 1px solid #e4e6e8;\r\n}\r\n\r\n.r-question-answer {\r\n\tfloat: left;\r\n    height: 30px;\r\n    width: 59px;\r\n    color: #6a737c;\r\n    font-style: normal;\r\n    font-weight: bold;\r\n    text-align: center;\r\n    line-height: 30px;\r\n    font-size: 17px;\r\n    margin-top: 12px;\r\n    margin-right: 10px;\r\n    border-right: 1px solid rgb(228, 230, 232);\r\n}\r\n.r-question-desc {\r\n\tfloat: right;\r\n    margin: 0;\r\n    padding: 0;\r\n    width: 658px;\r\n    height: 100%;\r\n    font-size: 15px;\r\n    font-weight: normal;\r\n    line-height: 55px;\r\n    text-align: left;\r\n}\r\n\r\n.r-question-desc a {\r\n\ttext-decoration: none;\r\n\tcolor: #005999;\r\n}", ""]);
+	exports.push([module.id, ".r-questions {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n}\r\n\r\n.r-question {\r\n\theight: 85px;\r\n    width: 728px;\r\n    list-style: none;\r\n    cursor: pointer;\r\n    border-bottom: 1px solid #e4e6e8;\r\n}\r\n\r\n.r-question-answer {\r\n\tfloat: left;\r\n    height: 61px;\r\n    width: 59px;\r\n    color: #6a737c;\r\n    font-style: normal;\r\n    font-weight: bold;\r\n    text-align: center;\r\n    line-height: 61px;\r\n    font-size: 18px;\r\n    margin-top: 12px;\r\n    margin-right: 10px;\r\n    border-right: 1px solid rgb(228, 230, 232);\r\n}\r\n.r-question-title {\r\n\tfloat: right;\r\n    margin: 0;\r\n    padding: 0;\r\n    width: 658px;\r\n    height: 50%;\r\n    font-size: 16px;\r\n    font-weight: normal;\r\n    line-height: 44px;\r\n    text-align: left;\r\n    text-indent: 10px;\r\n}\r\n\r\n.r-question-title a {\r\n\ttext-decoration: none;\r\n\tcolor: #086ed5;\r\n}\r\n.r-question-desc {\r\n    width: 648px;\r\n    height: 50%;\r\n    float: right;\r\n    font-size: 13px;\r\n    text-align: left;\r\n    color: #000;\r\n    line-height: 20px;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n}", ""]);
 
 	// exports
 
@@ -27804,7 +27808,190 @@
 
 
 	// module
-	exports.push([module.id, "body {\r\n\tfont-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;\r\n}\r\n.r-header {\r\n\theight: 45px;\r\n\twidth: 100%;\r\n\tbackground: #0767c8;\r\n\tbackground: -webkit-linear-gradient(top,#086ed5,#055db5);\r\n\tbackground: linear-gradient(to bottom,#086ed5,#055db5);\r\n}\r\n.r-header-box {\r\n\twidth: 960px;\r\n\theight: 45px;\r\n\tmargin: 0 auto;\r\n}\r\n.r-header-title, .r-header-nav, .r-header-searchBox {\r\n\tfloat: left;\r\n}\r\n.r-header-title {\r\n\tfont-size: 26px;\r\n\tline-height: 45px;\r\n\ttext-align: center;\r\n\tcolor: #fff;\r\n\tfont-weight: bold;\r\n}\r\n .r-header-searchBox {\r\n\twidth: 300px;\r\n\theight: 100%;\r\n}\r\n.r-header-nav {\r\n\tfont-size: 14px;\r\n\tline-height: 45px;\r\n\twidth: 48px;\r\n\ttext-align: center;\r\n\tmargin: 0 5px;\r\n}\r\n.r-header-nav a {\r\n\tdisplay: block;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tcolor: #fff;\r\n}\r\n.r-header-nav a.r-active {\r\n\tbackground: linear-gradient(to bottom,#055fb8,#095fb3);\r\n}\r\n.r-header-nav a:hover {\r\n\ttext-decoration: none;\r\n}\r\n.r-header-content {\r\n\tdisplay: block;\r\n\twidth: 960px;\r\n\tmargin: 0 auto;\r\n}", ""]);
+	exports.push([module.id, "body {\r\n\tfont-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;\r\n}\r\n.r-header {\r\n\theight: 45px;\r\n\twidth: 100%;\r\n\tbackground: #000422;\r\n\tbackground: -webkit-linear-gradient(top,#010d65,#000422);\r\n\tbackground: linear-gradient(to bottom,#010d65,#000422);\r\n}\r\n.r-header-box {\r\n\twidth: 960px;\r\n\theight: 45px;\r\n\tmargin: 0 auto;\r\n}\r\n.r-header-title, .r-header-nav, .r-header-searchBox {\r\n\tfloat: left;\r\n}\r\n.r-header-title {\r\n\tfont-size: 26px;\r\n\tline-height: 45px;\r\n\ttext-align: center;\r\n\tcolor: #fff;\r\n\tfont-weight: bold;\r\n}\r\n .r-header-searchBox {\r\n\twidth: 300px;\r\n\theight: 100%;\r\n}\r\n.r-header-nav {\r\n\tfont-size: 14px;\r\n\tline-height: 45px;\r\n\twidth: 48px;\r\n\ttext-align: center;\r\n\tmargin: 0 5px;\r\n}\r\n.r-header-nav a {\r\n\tdisplay: block;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tcolor: #fff;\r\n}\r\n.r-header-nav a.r-active {\r\n\tbackground: linear-gradient(to bottom,#055fb8,#095fb3);\r\n}\r\n.r-header-nav a:hover {\r\n\ttext-decoration: none;\r\n}\r\n.r-header-content {\r\n\tdisplay: block;\r\n\twidth: 960px;\r\n\tmargin: 0 auto;\r\n}", ""]);
+
+	// exports
+
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _index = __webpack_require__(236);
+
+	var _index2 = _interopRequireDefault(_index);
+
+	var _veryAjax = __webpack_require__(245);
+
+	__webpack_require__(256);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Tabs = function (_React$Component) {
+		_inherits(Tabs, _React$Component);
+
+		function Tabs(props) {
+			_classCallCheck(this, Tabs);
+
+			var _this = _possibleConstructorReturn(this, (Tabs.__proto__ || Object.getPrototypeOf(Tabs)).call(this, props));
+
+			_this.state = {
+				currentIndex: 0,
+				list: []
+			};
+			_this.handleClick = _this.handleClick.bind(_this);
+			return _this;
+		}
+
+		_createClass(Tabs, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.handleClick(null, 0);
+			}
+		}, {
+			key: 'handleClick',
+			value: function handleClick(e, index) {
+				if (e) {
+					var that = e.target;
+					index = parseInt(that.getAttribute('data-index'));
+				}
+				var self = this;
+				self.setState({ currentIndex: index });
+				_veryAjax.very.ajax({
+					url: '/list',
+					type: 'GET',
+					data: {
+						index: index
+					},
+					dataType: 'json',
+					success: function success(json) {
+						json = JSON.parse(json);
+						self.setState({
+							list: json.list
+						});
+					},
+					fail: function fail(err) {
+						console.err(err);
+					}
+				});
+			}
+		}, {
+			key: 'setLiClassName',
+			value: function setLiClassName(index) {
+				return index === this.state.currentIndex ? 'r-tabs-li r-is-active' : 'r-tabs-li';
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'r-tabs' },
+					_react2.default.createElement(
+						'ul',
+						{ className: 'r-tabs-ul' },
+						_react2.default.createElement(
+							'li',
+							{ className: 'r-title' },
+							'\u5168\u90E8\u95EE\u9898'
+						),
+						_react2.default.createElement(
+							'li',
+							{
+								className: this.setLiClassName(0),
+								onClick: this.handleClick,
+								'data-index': '0' },
+							'\u6700\u65B0'
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: this.setLiClassName(1),
+								onClick: this.handleClick,
+								'data-index': '1' },
+							'\u6700\u70ED'
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: this.setLiClassName(2),
+								onClick: this.handleClick,
+								'data-index': '2' },
+							'\u5468'
+						),
+						_react2.default.createElement(
+							'li',
+							{ className: this.setLiClassName(3),
+								onClick: this.handleClick,
+								'data-index': '3' },
+							'\u6708'
+						)
+					),
+					_react2.default.createElement(
+						'content',
+						{ className: 'r-tabs=content' },
+						_react2.default.createElement(_index2.default, { data: this.state.list })
+					)
+				);
+			}
+		}]);
+
+		return Tabs;
+	}(_react2.default.Component);
+
+	exports.default = Tabs;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(257);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(240)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./style.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(239)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".r-tabs-ul {\r\n    width: 728px;\r\n\tmargin-bottom: 10px;\r\n    border-bottom: 1px solid #e4e6e8;\r\n}\r\n.r-tabs-ul:after {\r\n\tcontent: '';\r\n\tclear: both;\r\n\tdisplay: block;\r\n}\r\n.r-tabs-li {\r\n\tposition: relative;\r\n    bottom: -1px;\r\n    background: #fff;\r\n    float: left;\r\n    width: 53px;\r\n    height: 40px;\r\n    color: #000;\r\n    font-size: 12px;\r\n    text-align: center;\r\n    line-height: 40px;\r\n    border: 1px solid #fff;\r\n    border-bottom: none;\r\n    margin-right: 27px;\r\n    cursor: pointer;\r\n}\r\n.r-tabs-li.r-is-active {\r\n\tborder-color: #e4e6e8;\r\n    border-bottom-color: #fff;\r\n    border-top: 2px #f48024 solid;\r\n}\r\n.r-title {\r\n    height: 42px;\r\n    line-height: 42px;\r\n    float: left;\r\n    font-size: 14px;\r\n    color: #000;\r\n    font-weight: bold;\r\n    margin-right: 344px;\r\n}", ""]);
 
 	// exports
 

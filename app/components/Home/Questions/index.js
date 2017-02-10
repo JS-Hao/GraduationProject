@@ -16,6 +16,12 @@ export default class QuestionsList extends React.Component {
 		})
 	}
 
+	componentWillReceiveProps(nextProps) {
+		this.setState({
+			data: nextProps.data
+		});
+	}
+
 	numberDealing(num) {
 		num = parseInt(num);
 		return num > 999 ? num.toString().charAt(0) + 'K' : num;
@@ -33,10 +39,12 @@ export default class QuestionsList extends React.Component {
 							<i className="r-question-answer">
 								{this.numberDealing(ele.answers)}
 							</i>
-							<h4 className="r-question-desc">
-								{/*<a href={ele.url ? ele.url : ''}>{ele.question}</a>*/}
+							<h4 className="r-question-title">
 								<Link to={'/details/' + ele.timestamp} >{ele.question}</Link>
 							</h4>
+							<h6 className="r-question-desc">
+								{ele.desc}
+							</h6>
 						</li>
 					);
 				})}

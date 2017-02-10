@@ -4,9 +4,9 @@ body {
 .r-header {
 	height: 45px;
 	width: 100%;
-	background: #0767c8;
-	background: -webkit-linear-gradient(top,#086ed5,#055db5);
-	background: linear-gradient(to bottom,#086ed5,#055db5);
+	background: #000422;
+	background: -webkit-linear-gradient(top,#010d65,#000422);
+	background: linear-gradient(to bottom,#010d65,#000422);
 }
 .r-header-box {
 	width: 960px;
