@@ -1,0 +1,93 @@
+.r-detail-answer {
+    width: 742px;
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 30px;
+}
+.r-detail-answer-left {
+	float: left;
+    width: 46px;
+    margin-right: 15px;
+}
+.r-detail-answer-right {
+	float: right;
+    box-sizing: border-box;
+    width: 680px;
+    background: #fff;
+    border: 1px solid #e7eaf1;
+    border-bottom: 1px solid #e7eaf1;
+    box-shadow: 0 1px 3px 0 rgba(0,37,55,.05);
+    border-radius: 2px;
+}
+.r-detail-answer-content {
+    font-size: 15px;
+    padding: 20px 0;
+    margin: 0 30px;
+    border-bottom: 1px solid #ccc;
+}
+.r-detail-answer-agreeBtnBox {
+    font-size: 16px;
+    text-align: center;
+}
+.r-detail-answer-agreeBtnBox i {
+    display: block;
+    width: 28px;
+}
+.r-detail-answer-agreeBtn, .r-detail-answer-disaBtn {
+    display: block;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-top: 10px solid transparent;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    background: #f7f8fa;
+    cursor: pointer;
+    outline: none;
+}
+.r-detail-answer-agreeBtn.is-canAgree {
+    border-bottom-color: #086ed5;
+}
+.r-detail-answer-disaBtn.is-canDisagree {
+    border-top-color: #086ed5;
+}
+.r-detail-answer-agreeBtn {
+    border-bottom: 15px solid #999;
+    margin-bottom: 7px;
+}
+.r-detail-answer-disaBtn {
+    border-top: 15px solid #999;
+    margin-top: 7px;
+}
+.r-detail-answerBox {
+    font-size: 14px;
+    padding-top: 15px;
+    line-height: 2;
+    min-height: 60px;
+}
+.r-detail-answer-dazhuBox {
+    margin-right: 30px;
+    color: #8590a6;
+}
+.r-detail-answer-dazhuPic {
+    float: right;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.r-detail-answer-dazhuBox div {
+    float: right;
+    vertical-align: top;
+    margin-top: 3px;
+}
+.r-detail-answer-comment, .r-detail-answer-delete {
+    line-height: 45px;
+    margin-left: 29px;
+    color: #8590a6;
+    cursor: pointer;
+}
+.r-detail-answer-delete {
+    margin-left: 10px;
+}

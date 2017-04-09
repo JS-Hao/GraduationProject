@@ -14,7 +14,15 @@ export default class Tabs extends React.Component {
 	}
 
 	componentDidMount() {
-		this.handleClick(null, 0);
+		this.setState({
+			list: this.props.list
+		});
+	}
+
+	componentWillReceiveProps(nextProps) {
+		this.setState({
+			list: nextProps.list
+		})
 	}
 
 	handleClick(e, index) {
@@ -25,7 +33,7 @@ export default class Tabs extends React.Component {
 		let self = this;
 		self.setState({currentIndex: index});
 		very.ajax({
-			url: '/list',
+			url: '/question',
 			type: 'GET',
 			data: {
 				index: index
@@ -34,11 +42,11 @@ export default class Tabs extends React.Component {
 			success: function(json) {
 				json = JSON.parse(json);
 				self.setState({
-					list: json.list
+					list: json.data.list
 				});
 			},
 			fail: function(err) {
-				console.err(err);
+				console.error(err);
 			}
 		})
 	}
@@ -50,6 +58,7 @@ export default class Tabs extends React.Component {
 	}
 
 	render() {
+		console.log(1, this.state.list);
 		return (
 			<div className="r-tabs">
 				<ul className="r-tabs-ul">

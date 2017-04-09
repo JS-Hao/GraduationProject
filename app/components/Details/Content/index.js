@@ -1,57 +1,60 @@
-import React from 'react'
-import './style.css'
+import React from 'react';
+import './style.css';
+import { markdown } from 'markdown';
+import { very } from '../../utils/very-ajax';
 
 export default class Content extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			data: null
-		}
-	}
-
-	componentWillMount() {
-		console.log(this.props.data)
-		this.setState({
-			data: this.props.data
-		})
+			question: this.props.data,
+			answer: null
+		};
 	}
 
 	numDealing(num) {
 		return num > 999 ? num.toString().charAt(0) + 'K' : num
 	}
 
+	escaped(str) {
+		return str.replace(/&quot;|&#34;/g, '\"')
+				  .replace(/&#39;|&apos;/g, "\'")	
+				  .replace(/&amp;|&#38;/g, '&')
+				  .replace(/&lt;|&#60;/g, '<')
+				  .replace(/&gt;|&#62;/g, '>')
+				  .replace(/&nbsp;|&#160;/g, ' ');
+	}
+
+	getRawMarkup(content) {
+    	return { __html: markdown.toHTML(this.escaped(content)) };
+  	}
+
 	render() {
-		return (
-			<div className="r-detail-content">
-				<div className="r-detail-title">
-					<h3>{this.state.data.title}</h3>
-					<p>{this.state.data.num + '个回答'}</p>
+		let question = this.state.question;
+		let editHTML = '';
+
+		if (parseInt(question.canEdit)) {
+			editHTML = (
+				<div className="r-detail-edit">
+					<a href={"/question/" + question.quesId.toString() + "/edit"}>编辑</a>
+					<a href={"/question/" + question.quesId + "/remove"}>删除</a>
 				</div>
-				<ul>
-					{this.state.data.answer.map((ele, index) => {
-						return (
-							<li className="r-detail-answer" key={index}>
-								<div className="r-detail-answer-left">
-									<div className="r-detail-answer-agreeBtnBox">
-										<button className="r-detail-answer-agreeBtn"></button>
-										{this.numDealing(ele.agree)}
-										<button className="r-detail-answer-disaBtn"></button>
-									</div>
-								</div>
-								<div className="r-detail-answer-right">
-									<div className="r-detail-answer-content">
-										{ele.text}
-									</div>
-									<div className="r-detail-answer-dazhuBox">
-										<img className="r-detail-answer-dazhuPic"></img>
-										<p className="r-detail-answer-dazhuName">{ele.name}</p>
-										<p className="r-detail-answer-agree">{ele.agree + '人赞同'}</p>
-									</div>
-								</div>	
-							</li>
-						)
-					})}
-				</ul>
+			)
+		}
+
+		return (
+			<div className="r-detailBox">
+				<div className="r-detail-title">
+					<h3>{question.title}</h3>
+					{ editHTML }
+				</div>
+				<div className="r-detail-content">
+					<p className="r-detail-content-header">问题详情</p>
+					<p 
+						className="r-detail-content-text"
+						dangerouslySetInnerHTML={this.getRawMarkup(question.content)} >
+					</p>
+				</div>
 			</div>
 		)
 	}

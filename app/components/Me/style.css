@@ -1,0 +1,23 @@
+.r-me {
+	position: relative;	
+	cursor: pointer;
+}
+.r-me ul {
+	position: absolute;
+	display: none;
+	background: #010d65;
+	width: 100px;
+    top: 45px;
+    z-index: 1;
+    border-radius: 0 0 4px 4px;
+}
+/* mouseover */
+.r-me.r-me-isMouseover {
+	background: #010d65;
+}
+.r-me.r-me-isMouseover ul {	
+	display: block;  
+}
+.r-me.r-me-isMouseover ul li {
+	border-top: 1px #000422 solid;
+}

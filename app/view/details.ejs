@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Setup</title>
+    <link rel="stylesheet" type="text/css" href="<%= common.rootPath %>/public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="<%= common.rootPath %>/public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="<%= common.rootPath %>/public/css/details.css">
+    <script>
+    	G = {
+    		userinfo: {
+                userId: '<%= userId %>',
+                username: '<%= username %>',
+                isLogin: parseInt('<%= isLogin %>')
+    		},
+    		question: {
+                quesId: '<%= quesId %>',
+    			title: '<%= title %>',
+    			content: '<%= content %>',
+    			pv: '<%= pv %>',
+    			author_name: '<%= author_name %>',
+    			author_id: '<%= author_id %>',
+    			created_at: '<%= created_at %>',
+                canEdit: parseInt('<%= canEdit %>')
+    		}
+    	}
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="<%= common.rootPath %>/public/js/build/details_bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.r-header {
+	height: 45px;
+	width: 100%;
+	background: #000422;
+	background: -webkit-linear-gradient(top,#010d65,#000422);
+	background: linear-gradient(to bottom,#010d65,#000422);
+}
+.r-header-box {
+	width: 960px;
+	height: 45px;
+	margin: 0 auto;
+}
+.r-header-title, .r-header-nav, .r-header-searchBox {
+	float: left;
+}
+.r-header-title {
+	width: 53px;
+    margin-top: 10px;
+}
+ .r-header-searchBox {
+	width: 409px;
+    height: 100%;
+}
+.r-header-nav {
+	font-size: 14px;
+	line-height: 45px;
+	width: 48px;
+	text-align: center;
+	margin: 0 5px;
+}
+.r-header-nav a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+.r-header-nav.r-header-me {
+	width: 100px;
+	float: right;
+}
+.r-header-nav a.r-active {
+	background: linear-gradient(to bottom,#055fb8,#095fb3);
+}
+.r-header-nav a:hover {
+	text-decoration: none;
+}

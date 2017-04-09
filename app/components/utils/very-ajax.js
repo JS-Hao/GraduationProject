@@ -4,6 +4,10 @@
 ; (function(exports) {
 	exports.very = exports.very || {};
 
+	// addClass && removeClass
+	exports.very.addClass = addClass;
+	exports.very.removeClass = removeClass;
+	// ajax
 	exports.very.ajax = ajax;
 
 	function ajax(options) {
@@ -50,6 +54,29 @@
 			}
 			arr.push(('v=' + Math.random()).replace('.', ''));
 			return arr.join('&');
+		}
+	}
+
+	function addClass(obj, name) {
+		if (obj.classList) {
+			return obj.classList.add(name);
+		} else {
+			var arr = obj.className.split(' ');
+			arr.push(name);
+			return obj.className = arr.join(' ');
+		}
+	}
+
+	function removeClass(obj, name) {
+		if (obj.classList) {
+			return obj.classList.remove(name);
+		} else {
+			var arr = obj.className.split(' ');
+			var index = arr.indexOf(name);
+			if (index !== -1) {
+				arr.splice(index, 1);
+				return obj.className = arr.join(' ');
+			}
 		}
 	}
 }) (module.exports);

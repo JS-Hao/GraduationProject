@@ -1,0 +1,36 @@
+.r-LoginAndSignup {
+	width: 300px;
+	margin: 0 auto;
+}
+.r-LoginAndSignup img {
+	width: 140px;
+    margin: 0 auto 20px;
+}
+.r-LoginAndSignup h4 {
+	text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.r-LS-switch {
+	padding: 0 60px;
+}
+.r-LS-btn {
+	float: left;
+    color: #fff;
+    box-sizing: border-box;
+    width: 40px;
+    margin: 0 25px 15px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+.r-LS-btn.r-btn-isClick {
+	border-bottom: 2px #007dfc solid;
+}
+.r-LS-content {
+	display: none;
+}
+.r-LS-content.r-content-isClick {
+	display: block;
+	height: 135px;
+}

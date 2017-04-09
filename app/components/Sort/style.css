@@ -1,0 +1,26 @@
+.r-sort {
+	height: 34px;
+    background: #095fb3;
+}
+.r-sort ul {
+	width: 968px;
+    margin: 0 auto;
+}
+.r-sort ul li {
+	float: left;
+    cursor: pointer;
+}
+.r-sort ul li:hover {
+	background: #55abed;
+}
+.r-sort ul li a:hover {
+	text-decoration: none;
+}
+.r-sort ul li a {
+	display: block;
+    padding: 10px 26px;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 14px;
+}

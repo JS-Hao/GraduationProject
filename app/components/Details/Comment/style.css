@@ -1,0 +1,71 @@
+.r-detail-comment {
+	float: left;
+    width: 655px;
+    padding-left: 72px;
+    padding-right: 19px;
+    margin-top: 10px;
+}
+.r-detail-comment-list {
+	background: #fff;
+    border: 1px solid #e7eaf1;
+    border-bottom: 1px solid #e7eaf1;
+    box-shadow: 0 1px 3px 0 rgba(0,37,55,.05);
+    border-radius: 2px;
+}
+.r-detail-comment-list {
+	border-bottom: none;
+}
+.r-detail-comment-list li {
+	padding: 10px 0;
+    margin: 0 19px;
+    border-bottom: 1px #ccc solid;
+}
+.r-detail-comment-list li:last-child {
+	border-bottom: none;
+}
+.r-detail-comment-list li a {
+	float: left;
+	margin-right: 5px;
+}
+.r-detail-comment-list li span {
+	float: right;
+}
+.r-detail-comment-list li p {
+	margin-top: 22px;
+}
+.r-detail-comment-edit {
+	height: 60px;
+    background: #fff;
+    border: 1px solid #e7eaf1;
+    border-top: 1px #ccc solid;
+    box-shadow: 0 1px 3px 0 rgba(0,37,55,.05);
+}
+.r-detail-comment-edit textarea {
+	width: 557px;
+    box-sizing: border-box;
+    outline: none;
+    height: 40px;
+    padding: 11px;
+    margin-top: 10px;
+    margin-left: 10px;
+    resize: none;
+    background: #f7f8fa;
+    border: 1px #ebeef5 solid;
+    border-radius: 3px;
+}
+.r-detail-comment-edit button {
+	width: 70px;
+    height: 40px;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: #086ed5;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}

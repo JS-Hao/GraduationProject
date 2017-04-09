@@ -1,0 +1,46 @@
+.r-signup input {
+	font-size: 14px;
+	padding: 5px 10px;
+	outline: none;
+	border: 1px solid #ccc;
+	border-radius: 2px 2px 0 0;
+}
+.r-signup input {
+	display: block;
+    width: 85%;
+    height: 38px;
+    margin: 0 auto;
+    box-sizing: border-box; 
+}
+.r-signup .r-signup-password {
+	margin-top: -1px;
+	border-radius: 0 0 2px 2px;
+}
+.r-signup .r-signup-btn {
+	margin-top: 22px;
+    background: #086ed5;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.r-signup .r-signup-btn:hover {
+	background: #55abed;
+}
+
+/************ 错误提示 *************/
+.r-signupBox {
+	position: relative;
+}
+.r-signup-warn1, .r-signup-warn2, .r-signup-warn3 {
+	display: none;
+	color: #c33;
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    right: -20px;
+}
+.r-signup-warn1, .r-signup-warn2, .r-signup-warn3 {
+    top: 8px;
+}

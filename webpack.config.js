@@ -1,8 +1,10 @@
 module.exports = {
   // 档案起始点从 entry 进入，因为是阵列所以也可以是多个档案
   entry: {
-    index: './app/index.js',
-    login: './app/components/Login/login.js'
+    index: './app/components/index.js',
+    login: './app/components/LoginAndSignup/login.js',
+    details: './app/components/index_details.js',
+    create: './app/components/index_create.js'
   },
   // output 是放入产生出来的结果的相关参数
   output: {

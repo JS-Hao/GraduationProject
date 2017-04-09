@@ -1,0 +1,128 @@
+.r-ask {
+	width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.r-ask label {
+	display: block;
+    font-size: 18px;
+    background: #fcf8e3;
+    padding: 10px;
+    color: #d0021b;
+    text-align: center;
+    border-radius: 3px;
+}
+.r-ask-title {
+	box-sizing: border-box;
+    width: 470px;
+    height: 35px;
+    font-size: 14px;
+    outline: none;
+    padding: 3px 10px;
+    border: 1px solid #ccc;
+    margin: 15px 0px;
+    background: #f3f3f3;
+}
+.r-ask-md {
+	width: 100%;
+}
+.r-ask-content-md {
+	float: left;
+	width: 470px;
+    height: 400px;
+    box-sizing: border-box;
+    resize: none;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
+    background: #f3f3f3;
+}
+.r-ask-title.is-warn, .r-ask-content-md.is-warn {
+    background: #fcf8e3;
+    border: 1px #d0021b solid;
+}
+.r-ask-content-html {
+	float: right;
+    width: 470px;
+    height: 400px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px #ccc solid;
+    overflow-y: scroll;
+}
+.r-ask-submit {
+	width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: #086ed5;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 15px;
+    margin-left: 860px;
+    cursor: pointer;
+}
+.r-ask-submit:hover {
+	background: #55abed;
+}
+
+/******************* markdown ********************/
+.r-ask-content-html {
+	color: #000;
+}
+.r-ask-content-html.is-input * {
+	background: rgb(217, 237, 247);
+}
+.r-ask-content-html h1 {
+	font-size: 24px;
+}
+.r-ask-content-html h2 {
+	font-size: 22px;
+}
+.r-ask-content-html h3 {
+	font-size: 20px;
+}
+.r-ask-content-html h4 {
+	font-size: 18px;
+}
+.r-ask-content-html h5 {
+	font-size: 16px;
+}
+.r-ask-content-html h6 {
+	font-size: 14px;
+}
+.r-ask-content-html em {
+	font-style: italic;
+}
+.r-ask-content-html strong {
+	font-weight: bold;
+}
+/******************** radio ********************/
+.r-ask-radio {
+    background: #fff;
+    margin-top: 10px;
+}
+.r-ask-radio p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.r-ask-radio label {
+    float: left;
+    font-size: 14px;
+    vertical-align: middle;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    background: rgb(1,126,102);
+    background: rgba(1,126,102,.08);
+    margin-right: 8px;
+}
+.r-ask-radio input {
+    vertical-align: middle;
+    margin-right: 6px;
+}

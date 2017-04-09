@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Setup</title>
+    <link rel="stylesheet" type="text/css" href="<%= common.rootPath %>/public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="<%= common.rootPath %>/public/css/common.css">
+    <script>
+    	G = {
+    		userinfo: {
+                username: '<%= username %>',
+                isLogin: parseInt('<%= isLogin %>')
+    		}
+    	}
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+    <div id="particles-js"></div>
+    <script src="<%= common.rootPath %>/public/js/build/index_bundle.js"></script>
+</body>
+</html>

@@ -1,41 +1,52 @@
-import React from 'react'
-import Content from './Content/index'
+import React from 'react';
+import Content from './Content/index';
+import Answer from './Answer/index';
+import AnswerEdit from './AnswerEdit/index';
+import { very } from '../utils/very-ajax'
 
-let data = {
-	title: '朱志豪是个怎样的人？',
-	pid: 1,
-	name: '王大拿',
-	num: 3,
-	answer: [
-		{
-			text: '肯定是帅哥啦',
-			pid: 2,
-			name: '王林峰',
-			timestamp: 324235523,
-			agree: 2344
-		},
-		{
-			text: '我爱他我爱他我爱他爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我我爱他我爱他我爱他我爱他我爱他我爱他我爱他爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我我爱他我爱他我爱他我爱他我爱他我爱他我爱他爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我我爱他我爱他我爱他我爱他我爱他我爱他我爱他爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我我爱他我爱他我爱他我爱他我爱他我爱他我爱他爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我我爱他我爱他我爱他我爱他我爱他我爱他我爱他爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我爱他我',
-			pid: 3,
-			name: '不愿透露姓名的广杰',
-			timestamp: 324546453,
-			agree: 123
-		},
-		{
-			text: '不要老拿我男票开刷！！口亨',
-			pid: 4,
-			name: 'Saber',
-			timestamp: 54546456,
-			agree: 7787
-		}
-
-	]
-}
 export default class Detail extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			data: []
+		}
+		this.getAnswerData = this.getAnswerData.bind(this);
+	}
+
+	componentDidMount() {
+		this.getAnswerData();
+	}
+
+	getAnswerData() {
+		let that = this;
+		very.ajax({
+			url: '/question/' + this.props.data.quesId + '/answer',
+			type: 'GET',
+			dataType: 'json',
+			success: function(res) {
+				res = JSON.parse(res)
+				console.log('获取回答成功', res);
+				that.setState({
+					data: res.data.answers
+				})
+			},
+			fail: function(err) {
+				console.error(err);
+			}
+		})
+	}
+
 	render() {
+		let url = '/question/' + this.props.data.quesId + '/answer';
 		return (
-			<div className="r-details" style={{'width': '680px'}}>
-				{ <Content data={data} /> }
+			<div className="r-details">
+				<Content data={this.props.data} />
+				<Answer 
+					data={this.state.data} 
+					id={this.props.data.quesId} 
+					handleEmit={this.getAnswerData} 
+					userinfo={this.props.userinfo} />
+				<AnswerEdit url={url} handleEmit={this.getAnswerData} />
 			</div> 
 		)
 	}
